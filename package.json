@@ -1,0 +1,20 @@
+{
+  "name": "alpha-discord",
+  "version": "2.2.1",
+  "description": "A wrapper to help users to use functions of discord.js@13 in discord.js@12",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "emoji-unicode": "^2.0.1",
+    "emoji-unicode-map": "^1.1.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "",
+  "license": "ISC"
+}
