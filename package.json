@@ -1,6 +1,6 @@
 {
   "name": "alpha-discord",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "A wrapper to help users to use functions of discord.js@13 in discord.js@12",
   "main": "index.js",
   "dependencies": {

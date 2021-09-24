@@ -1,4 +1,5 @@
 module.exports = {
-  Client: require('./services/Client.js'),
-  Thread: require('./utils/Thread.js')
+  Client: require('./client/Client.js'),
+  Thread: require('./utils/Thread.js'),
+  SplitArray: require('./utils/SplitArray.js')
 }

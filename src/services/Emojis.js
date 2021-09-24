@@ -17,15 +17,17 @@ Object.defineProperties(Message.prototype, {
                 this._emojis.set(emoji.id, emoji)
             }
             if (this._emojis.size < 1) {
-              const emojis = (this.content.split(" "))
-            .filter(arg => unicode.get(arg));
-            if (emojis) {
-              emojis.forEach(emojo => {
-                this._emojis.set(emojo, {
-                  unicode: emojiUnicode(emojo)
+              const emojis = this.content.split(" ")
+            .filter(a => unicode.get(a));
+            console.log(emojis)
+            if (emojis.length > 0) {
+              emojis.forEach(unEmoji => {
+                this._emojis.set(unEmoji, {
+                  unicode: emojiUnicode(unEmoji)
                 })
               })
-            }
+}
+
             }
             return this._emojis
         }

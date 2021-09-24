@@ -1,5 +1,6 @@
 const Discord = require('discord.js'),
 { Message } = require('discord.js');
+const ActionsManager = require('./actions/ActionsManager');
 const ReactionEmoji = Discord.ReactionEmoji;
 const AlphaError = require('../errors/create.js');
 module.exports = class Client extends Discord.Client {
@@ -11,11 +12,11 @@ module.exports = class Client extends Discord.Client {
     this.token = options.token;
     this.prefix = options.prefix;
     this.client = this;
-
+    this.actions.newMessage = new ActionsManager(this);
     super.login(this.token);
-    require('./React.js');
-    require('./Emojis.js');
-    require('./Collector.js')
+    require('../services/React.js');
+    require('../services/Emojis.js');
+    require('../services/Collector.js')
   }
 
   createThread({message, name, duration=1440}) {
